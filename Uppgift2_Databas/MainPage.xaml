@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Uppgift2_Databas.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Uppgift2_Databas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1100" Height="1000">
+    
+    <Grid Margin="0,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="800"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="mainMenu_Grid" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" Text="Select Activity" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" />
+
+            <Button x:Name="btnNewCase" Content="New Case" Margin="0,40,0,0" VerticalAlignment="Top" Height="68" Width="150" HorizontalAlignment="Center" Background="#FFD6D3CD" Click="btnNewCase_Click"/>
+            <Button x:Name="btnOpenCase" Content="Open Case" Margin="0,30,0,0" VerticalAlignment="Top" Height="68" Width="150" HorizontalAlignment="Center" Background="#FFD6D3CD" Click="btnOpenCase_Click"/>
+            <Button x:Name="btnClosedCase" Content="Closed Case" Margin="0,30,0,0" VerticalAlignment="Top" Height="68" Width="150" HorizontalAlignment="Center" Background="#FFD6D3CD" Click="btnClosedCase_Click"/>
+        </StackPanel>
+
+        <SplitView Grid.Column="1">
+            <SplitView.Content>
+                <Frame x:Name="frame" />
+            </SplitView.Content>
+        </SplitView>
+
+    </Grid>
+</Page>
